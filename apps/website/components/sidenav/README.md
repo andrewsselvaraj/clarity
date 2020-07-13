@@ -1,109 +1,54 @@
+---
+title: Overview
+toc: true
+---
+
+<div cds-layout="pl@md:sm" class="alert alert-warning">
+    <div class="alert-items">
+        <div class="alert-item static" role="alert">
+            <div class="alert-icon-wrapper">
+                <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+            </div>
+            <span class="alert-text">
+                Sidenav has been deprecated but does not have a targeted version for removal. The recommendation for this pattern is to use the <a href="/components/vertical-nav/">vertical nav</a> component.
+            </span>
+        </div>
+    </div>
+</div>
+
 # Sidenav
 
-![HTML5](assets/images/bugs/badge_html5.svg 'HTML5')![CSS3](assets/images/bugs/badge_css3.svg 'CSS3')![Angular](assets/images/bugs/badge_ng.svg 'Angular')
+The sidenav is a left-aligned navigational component.
 
-- [Examples & Code](/documentation/sidenav#top)
-- [Design Guidelines](/documentation/sidenav#guidelines)
+## Usage
 
-##### The sidenav is a left-aligned navigational component.
+When there are many navigation links a side navigation provides overflow and scrolling to the list of links. Users are informed when a navigation item is active.
 
-Clarity’s sidenav is placed inside the `.main-container` class and appears after the `.content-area`.
-
-###### .sidenav-content
-
-This is a wrapper intended to contain one or more `.nav-group` groups.
-
-###### .nav-group
-
-A `.nav-group` consists of a checkbox and label followed by a `.nav-list`. The order of the markup is important to achieve the collapsible effect on the nav-groups.
-
-###### .collapsible
-
-A `.nav-group` inside a sidenav becomes collapsible by adding a `.collapsible` class.
-
-###### .nav-list
-
-A `.nav-list` is a list of navigation links. Each navigation link extends the `.nav-link` class. An active `.nav-link` is assigned the `.active` class.
-
-Header
-
-[Nav Element 1](javascript://) [Nav Element 2](javascript://)
-
-Collapsible Nav Element
-
-- [Link 1](javascript://)
-- [Link 2](javascript://)
-
-Default Nav Element
-
-- [Link 1](javascript://)
-- [Link 2](javascript://)
-- [Link 3](javascript://)
-- [Link 4](javascript://)
-- [Link 5](javascript://)
-- [Link 6](javascript://)
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora eligendi quos unde id optio culpa, illo perspiciatis laboriosam explicabo in voluptate incidunt est beatae rerum quisquam accusantium corporis reiciendis delectus!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi ad, minus fuga neque voluptatibus quidem libero ducimus quas ipsa eveniet explicabo voluptates sunt error! Eligendi a, animi consequatur odit.
-
-```html
-<div class="main-container">
-  <header class="header header-6">
-    ...
-  </header>
-  <div class="content-container">
-    <nav class="sidenav">
-      <section class="sidenav-content">
-        <a href="..." class="nav-link active">
-          Nav Element 1
-        </a>
-        <a href="..." class="nav-link">
-          Nav Element 2
-        </a>
-        <section class="nav-group collapsible">
-          <input id="tabexample1" type="checkbox" />
-          <label for="tabexample1">Collapsible Nav Element</label>
-          <ul class="nav-list">
-            <li><a class="nav-link">Link 1</a></li>
-            <li><a class="nav-link">Link 2</a></li>
-          </ul>
-        </section>
-        <section class="nav-group">
-          <input id="tabexample2" type="checkbox" />
-          <label for="tabexample2">Default Nav Element</label>
-          <ul class="nav-list">
-            <li><a class="nav-link">Link 1</a></li>
-            <li><a class="nav-link">Link 2</a></li>
-            <li><a class="nav-link active">Link 3</a></li>
-            <li><a class="nav-link">Link 4</a></li>
-            <li><a class="nav-link">Link 5</a></li>
-            <li><a class="nav-link">Link 6</a></li>
-          </ul>
-        </section>
-      </section>
-    </nav>
-    <div class="content-area">
-      ...
-    </div>
-  </div>
-</div>
-```
-
-### Usage
-
-The sidenav is a familiar navigation pattern for users. The sidenav can fit as many navigation links as needed, scrolling when the content exceeds the viewport. Use the sidenav:
+Use the sidenav:
 
 - For links secondary to the links in the header or subnav
 - For a navigation schema with a deep hierarchy
 - When the header and subnav cannot accommodate the required links
 
-The sidenav works best in desktop applications.
+The sidenav works best in desktop applications. Scroll when the content exceeds the viewport.
 
-#### Grouping Links
+## Anatomy
 
-If you group link names under a heading, don’t make the heading a link.
+### Structure
 
-#### Using Icons
+Clarity [application layout](/foundation/app-layout/) depends on a specific DOM structure for layout to work properly. SIde nav fits into this and has a specific place in the DOM hierarchy. A Sidenav container is a sibling element of the content area.
 
+<doc-demo src="/demos/sidenav/structure-ng.html" demo="/demos/sidenav/structure-css.html" />
+
+### Navigation Groups
+
+Naviagation groups provide a way to group similar or related links together. When grouping links, do not make the heading a link.
+
+<doc-demo src="/demos/sidenav/nav-groups-ng.html" demo="/demos/sidenav/nav-groups-css.html" />
+
+### Icons
+
+Using Icons
 Include icons when you want to provide a more appealing visual look than just text.
+
+<doc-demo src="/demos/sidenav/icons-ng.html" demo="/demos/sidenav/icons-css.html" />
