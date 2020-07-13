@@ -38,6 +38,7 @@ export class ClrPopoverContent implements AfterContentChecked, OnDestroy {
   }
 
   @Input('clrPopoverContentAt')
+  @Input('clrPopoverContentAt')
   set contentAt(position: ClrPopoverPosition) {
     this.smartPositionService.position = position;
   }
