@@ -80,7 +80,7 @@ Use icons across all links if you choose to use them. Add icons to some links an
 
 <ClrRow>
 
-::: do Use use icons on all nav links
+::: do Use icons on all nav links
 
 ![Do header](/images/components/vertical-nav/icons-do.png)
 
