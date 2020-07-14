@@ -1,27 +1,28 @@
 ---
 title: Overview
+toc: true
 ---
 
 # Labels
 
-- [Design Guidelines](/documentation/labels#top)
-- [Code & Examples](/documentation/labels#examples)
+Labels show concise metadata in a compact format.
 
-##### Labels show concise metadata in a compact format.
+[//]: # 'DEMO - John and James'
 
-john@example.comjames@example.com
+## Usage
 
-### Style
+Use a label to show the metadata when the space is limited or when you want to catch user’s attention. It is commonly used for tags, or fiter items.
+The distinctive visual style of labels deliberately deviates from buttons. This prevents users from confusing labels with buttons and allows labels to co-exist with other components without competing for a user's attention with primary and secondary buttons on the screen.
+
+[//]: # 'DEMO - Fruit drink meat vegetable'
+
+[//]: ## Types
+
+## Anatomy
 
 Labels are visually styled to differentiate them from buttons.
 
-#### Overall Style
-
-The distinctive visual style of labels deliberately deviates from buttons. This prevents users from confusing labels with buttons and allows labels to co-exist with other components without competing for a user's attention with primary and secondary buttons on the screen.
-
-FruitMeatDrinkVegetable
-
-#### Color
+### Color
 
 The Clarity color palette and the colors you are using throughout your application should guide which colors you choose for your labels. We recommend reserving stoplight colors (red, yellow, and green) to display state or status.
 
@@ -29,167 +30,57 @@ If the intent is to use colors as a way to have groups of labels be visually dis
 
 Avoid using too many colors within the same context, displaying too many colors may distract the user from the core of your application and the information it presents.
 
-![](assets/images/documentation/labels/labels_color.svg)
+[//]: # 'IMAGE - red yellow green blue / border fill text'
 
-Status colors are generally reserved to display state or status.
-
-### Typography
-
-##### Capitalization
-
-To differentiate from buttons, it is recommended that you avoid using all caps for labels. Using all caps might make the user think the label is a button and conflates the use case for labels with actions and buttons.
-
-LONDON (LOCATION)NABLUS (LOCATION)
-
-###### Don't
-
-Use all caps in labels
-
-##### Multiline Text
-
-Keep labels to one line of concise text. The use case for labels is to showcase information in a compact format.
-
-LONDON
-(LOCATION)NABLUS
-(LOCATION)
-
-###### Don't
-
-Use multiple lines of text within a single label.
-
-##### Additional Metadata
-
-Describe additional information or metadata in parenthesis if necessary.
-
-London (Location)Nablus (Location)
-
-###### Do
-
-Use parenthesis for additional metadata displayed in the same label.
-
-### Behavior
-
-##### Clicking Labels
-
-Labels may be clickable. In this case, clicking on a label should perform an action related to that label. Clicking on a location label used as a tag, for example, could serve to filter the results in a nearby list by that location. Clicking a label could also display more information about the metadata described by that label.
-
-[Chocolate](javascript://) [Vanilla](javascript://) [Mixed](javascript://)
-
-##### Dismissing Labels
-
-A label can be dismissed. Use a close icon at the right-most side of a label to dismiss it.
-
-[james@test.com](javascript://) [jimmy@test.com](javascript://)
-
-##### Labels and Badges
+### Labels and Badges
 
 Labels and badges can be used together to show a count relating to the metadata displayed in the label.
 
-Production 12 Dev/Test 99+
+[//]: # 'DEMO - Production / dev test'
 
-Documentation for Badges is available [here](/documentation/badges).
+Documentation for Badges is available [here](https://clarity.design/documentation/badges).
 
-### Code & Examples
+### Additional Metadata
 
-A label is a visual tag that provides additional information about data in the UI.
+Describe additional information or metadata in parenthesis if necessary.
 
-###### 1\. Labels (not clickable)
+[//]: # 'DEMO - London (location'
 
-AustinNew YorkPalo AltoSan FranciscoSeattle
+_Do_
+Use parenthesis for additional metadata displayed in the same label.
 
-```html
-<span class="label">Austin</span>
-<span class="label">New York</span>
-<span class="label">Palo Alto</span>
-<span class="label">San Francisco</span>
-<span class="label">Seattle</span>
-```
+### Multiline Text
 
-###### 2\. Color Options
+Keep labels to one line of concise text. The use case for labels is to showcase information in a compact format.
 
-SeattleAustinNew YorkPalo AltoSan Francisco
+[//]: # 'DEMO - multiline text'
 
-```html
-<span class="label">Seattle</span>
-<span class="label label-purple">Austin</span>
-<span class="label label-blue">New York</span>
-<span class="label label-orange">Palo Alto</span>
-<span class="label label-light-blue">San Francisco</span>
-```
+_Don't_
+Use multiple lines of text within a single label.
 
-###### 3\. Clickable Labels
+## Behavior
 
-[Austin](javascript://)[New York](javascript://)[Palo Alto](javascript://)[San Francisco](javascript://)[Seattle](javascript://)
+### Clicking Labels
 
-```html
-<a href="..." class="label label-purple clickable">
-  Austin
-</a>
-<a href="..." class="label label-blue clickable">
-  New York
-</a>
-<a href="..." class="label label-orange clickable">
-  Palo Alto
-</a>
-<a href="..." class="label label-light-blue clickable">
-  San Francisco
-</a>
-<a href="..." class="label clickable">
-  Seattle
-</a>
-```
+Labels may be clickable. In this case, clicking on a label should perform an action related to that label. Clicking on a location label used as a tag, for example, could serve to filter the results in a nearby list by that location. Clicking a label could also display more information about the metadata described by that label.
 
-###### 4\. Status Labels (not clickable)
+[//]: # 'DEMO - chocolate, vanilla, mixed'
 
-InfoSuccessWarningError
+### Dismissing Labels
 
-```html
-<span class="label label-info">Info</span>
-<span class="label label-success">Success</span>
-<span class="label label-warning">Warning</span>
-<span class="label label-danger">Error</span>
-```
+A label can be dismissed. Use a close icon at the right-most side of a label to dismiss it.
 
-###### 5\. Labels with Badges
+[//]: # 'DEMO - James and Jimmy'
 
-[Austin1](javascript://)[New York2](javascript://)[Palo Alto3](javascript://)[San Francisco12](javascript://)[Seattle15](javascript://)[Chicago55](javascript://)[San Jose66](javascript://)[Charlotte88](javascript://)[Atlanta99+](javascript://)[Philadelphia0](javascript://)
+[//]: # Placement
 
-```html
-<a href="..." class="label label-purple clickable">
-  Austin
-  <span class="badge">1</span>
-</a>
-<a href="..." class="label label-blue clickable">
-  New York
-  <span class="badge">2</span>
-</a>
-<a href="..." class="label label-orange clickable">
-  Palo Alto
-  <span class="badge">3</span>
-</a>
-<a href="..." class="label label-light-blue clickable">
-  San Francisco
-  <span class="badge">12</span>
-</a>
-<a href="..." class="label clickable">
-  Seattle
-  <span class="badge">15</span>
-</a>
-<a href="..." class="label label-purple clickable">
-  Chicago
-  <span class="badge">55</span>
-</a>
-<a href="..." class="label label-blue clickable">
-  San Jose
-  <span class="badge">66</span>
-</a>
-<a href="..." class="label label-orange clickable">
-  Charlotte
-  <span class="badge">88</span>
-</a>
-<a href="..." class="label label-light-blue clickable">
-  Atlanta
-  <span class="badge">99+</span>
-</a>
-<a href="..." class="label clickable"> Philadephia<span class="badge">0</span> </a>
-```
+## Content
+
+### Capitalization
+
+To differentiate from buttons, it is recommended that you avoid using all caps for labels. Using all caps might make the user think the label is a button and conflates the use case for labels with actions and buttons.
+
+[//]: # 'DEMO - ALL CAPS'
+
+_Don't_
+Use all caps in labels
